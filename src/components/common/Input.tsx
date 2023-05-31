@@ -1,4 +1,4 @@
-import { HTMLInputTypeAttribute } from "react";
+import { ChangeEvent, HTMLInputTypeAttribute } from "react";
 
 type InputProps = {
   styles: string;
@@ -6,6 +6,8 @@ type InputProps = {
   required?: boolean;
   placeholder?: string;
   type: HTMLInputTypeAttribute;
+  handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  error?: string;
 };
 
 const Input: React.FC<InputProps> = ({
@@ -14,6 +16,8 @@ const Input: React.FC<InputProps> = ({
   styles,
   required,
   placeholder,
+  handleChange,
+  error,
 }) => {
   return (
     <>
@@ -23,7 +27,9 @@ const Input: React.FC<InputProps> = ({
         type={type}
         required={required}
         className={styles}
+        onChange={handleChange}
       />
+      {error && <span>{error}</span>}
     </>
   );
 };

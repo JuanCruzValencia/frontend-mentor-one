@@ -2,7 +2,6 @@
 export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    screens: {},
     colors: {
       red: "#FF6666",
       green: "#33CC99",
@@ -10,6 +9,9 @@ export default {
       dblue: "#333333",
       gblue: "#9999CC",
       white: "#ffffff",
+      grey: "#777777",
+      dgreen: "#29a37a",
+      lgreen: "#85e0c2",
     },
     fontSize: {
       s: 14,
@@ -17,7 +19,7 @@ export default {
       l: 20,
     },
     fontFamily: {
-      sans: ["poppins", "sans-serif"],
+      sans: ["Poppins", "sans-serif"],
     },
     fontWeight: {
       400: 400,
