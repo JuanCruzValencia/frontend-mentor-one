@@ -1,6 +1,6 @@
 # Challenge one - SignUn Form 
 
-Link to live version - [Sign Un - Form](https://juancruzvalencia.github.io/frontend-mentor-one/)
+Link to live version - [Sign Up - Form](https://juancruzvalencia.github.io/frontend-mentor-one/)
 
 ## UX
 Layout is simple and clear. Project is accesible through both desktop and mobile devices. For build the frontend functionality ReactJs and TailwindCSS is used.
