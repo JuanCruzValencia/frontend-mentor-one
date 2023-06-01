@@ -1,12 +1,8 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import { ErrorsField, FormFields } from "../iinterfaces/interface";
-
-interface FormProps {
-  initialState: FormFields;
-}
+import { ErrorsField, FormFields, FormProps } from "../interfaces/interface";
 
 const useForm = ({ initialState }: FormProps) => {
-  const [form, setForm] = useState<FormFields>(initialState);
+  const [form, setForm] = useState<FormFields>({ ...initialState });
   const [errors, setErrors] = useState<ErrorsField>({});
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -20,7 +16,7 @@ const useForm = ({ initialState }: FormProps) => {
     });
   };
 
-  const handleSubmit = (e: FormEvent<HTMLInputElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const newErrors: ErrorsField = {};
@@ -48,7 +44,7 @@ const useForm = ({ initialState }: FormProps) => {
     console.log(form);
   };
 
-  return { form, errors, handleChange, handleSubmit };
+  return { errors, handleChange, handleSubmit };
 };
 
 export default useForm;

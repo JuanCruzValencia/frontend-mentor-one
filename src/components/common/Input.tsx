@@ -26,10 +26,16 @@ const Input: React.FC<InputProps> = ({
         placeholder={placeholder}
         type={type}
         required={required}
-        className={styles}
+        className={
+          error ? styles + "border-2 border-red placeholder:text-red" : styles
+        }
         onChange={handleChange}
       />
-      {error && <span>{error}</span>}
+      {error && (
+        <span className=" bottom-0 px-2 text-red text-s self-end italic">
+          {error}
+        </span>
+      )}
     </>
   );
 };

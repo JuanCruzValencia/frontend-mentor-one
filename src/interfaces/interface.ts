@@ -11,3 +11,7 @@ export interface ErrorsField {
   email?: string;
   password?: string;
 }
+
+export interface FormProps {
+  initialState: FormFields;
+}
