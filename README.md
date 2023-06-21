@@ -1,4 +1,4 @@
-# Challenge one - SignUn Form 
+# Challenge one - SignUp Form 
 
 Link to live version - [Sign Up - Form](https://juancruzvalencia.github.io/frontend-mentor-one/)
 
